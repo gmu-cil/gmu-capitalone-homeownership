@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathways to Homeownership | Making the Dream Accessible</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C5F4F;
+            --primary-light: #4A8A73;
+            --accent: #D4A574;
+            --accent-warm: #E8C4A0;
+            --text-dark: #1A2B25;
+            --text-body: #3D4F47;
+            --bg-cream: #FAF8F5;
+            --bg-light: #FFFFFF;
+            --shadow: rgba(44, 95, 79, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-body);
+            background: var(--bg-cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.95;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Project Goal Section */
+        .section {
+            padding: 80px 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .section-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-body);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        /* Project Goal Card */
+        .goal-card {
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 60px;
+            box-shadow: 0 4px 20px var(--shadow);
+            max-width: 900px;
+            margin: 0 auto;
+            border-left: 6px solid var(--accent);
+            animation: slideInUp 0.7s ease-out;
+        }
+        
+        .goal-card p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--text-body);
+        }
+        
+        .goal-card p:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        /* Team Section */
+        .team-section {
+            background: var(--bg-light);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 40px 30px;
+            background: var(--bg-cream);
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeIn 0.8s ease-out backwards;
+        }
+        
+        .team-member:nth-child(1) { animation-delay: 0.1s; }
+        .team-member:nth-child(2) { animation-delay: 0.2s; }
+        .team-member:nth-child(3) { animation-delay: 0.3s; }
+        
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px var(--shadow);
+            background: var(--bg-light);
+        }
+        
+        .team-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            border: 5px solid var(--accent-warm);
+            object-fit: cover;
+            transition: border-color 0.3s ease;
+        }
+        
+        .team-member:hover .team-photo {
+            border-color: var(--accent);
+        }
+        
+        .team-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .team-title {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .team-expertise {
+            font-size: 1rem;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+        
+        /* Collaborator Section */
+        .collaborator-section {
+            background: linear-gradient(to bottom, var(--bg-cream), var(--bg-light));
+            text-align: center;
+        }
+        
+        .collaborator-card {
+            background: white;
+            border-radius: 16px;
+            padding: 50px 60px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px var(--shadow);
+            border: 2px solid var(--accent-warm);
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .collaborator-badge {
+            display: inline-block;
+            background: var(--accent-warm);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+        
+        .collaborator-logo {
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto 24px;
+            display: block;
+        }
+        
+        .collaborator-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-body);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .goal-card {
+                padding: 40px 30px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .collaborator-card {
+                padding: 40px 30px;
+            }
+        }
+        
+        /* Decorative Elements */
+        .decorative-line {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent), var(--accent-warm));
+            margin: 0 auto 24px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Pathways to Homeownership</h1>
+            <p class="hero-subtitle">
+                Making homeownership accessible and achievable for everyone through intelligent, personalized guidance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Goal Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="decorative-line"></div>
+                <h2 class="section-title">Our Mission</h2>
+            </div>
+            
+            <div class="goal-card">
+                <p>
+                    Navigating the path to homeownership can be overwhelming. Programs, resources, and policies vary dramatically across states and counties, and information is scattered across hundreds of websites. For many people—especially those with disabilities, low incomes, or unique circumstances—finding the right help feels impossible.
+                </p>
+                <p>
+                    We're building an <span class="highlight">intelligent information system</span> that changes this. By combining comprehensive data collection, human-centered design, and AI technology, we're creating a platform that provides <span class="highlight">personalized guidance</span> tailored to each person's unique situation—their location, income, legal status, disability status, credit history, and more.
+                </p>
+                <p>
+                    Our approach brings together <span class="highlight">large-scale surveys</span> to identify credible resources, <span class="highlight">expert interviews</span> to understand real needs and challenges, and <span class="highlight">AI-powered recommendations</span> refined through continuous human feedback. The result: a stand-alone system that connects people across the United States with the resources, programs, and knowledge they need to achieve homeownership.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="decorative-line"></div>
+                <h2 class="section-title">Our Team</h2>
+                <p class="section-subtitle">
+                    Experts in information access, human-centered AI, and urban systems working together to solve complex challenges.
+                </p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://www.gmu.edu/sites/g/files/yyqcgq291/files/2023-09/Myeong-Lee-500x500.jpg" 
+                         alt="Myeong Lee" 
+                         class="team-photo">
+                    <h3 class="team-name">Myeong Lee</h3>
+                    <p class="team-title">Principal Investigator</p>
+                    <p class="team-expertise">
+                        Information access and inequality expert with extensive experience studying large-scale information ecology of disability services.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://www.gmu.edu/sites/g/files/yyqcgq291/files/2023-09/Ray-Hong-500x500.jpg" 
+                         alt="Ray Hong" 
+                         class="team-photo">
+                    <h3 class="team-name">Ray Hong</h3>
+                    <p class="team-title">Co-Investigator</p>
+                    <p class="team-expertise">
+                        Human-in-the-loop and interaction design expert with deep expertise in the autism domain and accessible technology.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://cil.cec.gmu.edu/assets/members/mahdi.png" 
+                         alt="Mahdi Hashemi" 
+                         class="team-photo">
+                    <h3 class="team-name">Mahdi Hashemi</h3>
+                    <p class="team-title">Co-Investigator</p>
+                    <p class="team-expertise">
+                        AI and machine learning expert specializing in urban systems and intelligent infrastructure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborator Section -->
+    <section class="section collaborator-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="decorative-line"></div>
+                <h2 class="section-title">Key Collaborator</h2>
+            </div>
+            
+            <div class="collaborator-card">
+                <span class="collaborator-badge">Partnership</span>
+                <img src="https://vbpd.virginia.gov/wp-content/uploads/2023/09/vbpd_logo.svg" 
+                     alt="Virginia Board for People with Disabilities" 
+                     class="collaborator-logo">
+                <p class="collaborator-description">
+                    The <strong>Virginia Board for People with Disabilities</strong> brings essential advocacy, community connections, and domain expertise to this project. Their deep understanding of affordable housing challenges facing people with disabilities and proven track record of collaboration ensures our platform addresses real needs and reaches the communities that need it most.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Pathways to Homeownership Project | George Mason University</p>
+            <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.8;">
+                Making the dream of homeownership accessible to all
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
