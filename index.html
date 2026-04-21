@@ -271,7 +271,68 @@
             line-height: 1.7;
             color: var(--text-body);
         }
-        
+
+        /* Past Work Section */
+        .past-work-section {
+            background: var(--bg-cream);
+        }
+
+        .past-work-subsection {
+            max-width: 900px;
+            margin: 0 auto 48px;
+        }
+
+        .past-work-subsection:last-child {
+            margin-bottom: 0;
+        }
+
+        .past-work-subtitle {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-warm);
+        }
+
+        .past-work-list {
+            list-style: decimal outside;
+            padding-left: 24px;
+            margin: 0;
+        }
+
+        .past-work-item {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-body);
+            margin-bottom: 14px;
+            padding-left: 6px;
+        }
+
+        .past-work-item::marker {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .past-work-item a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-warm);
+            transition: border-color 0.2s ease, color 0.2s ease;
+            word-break: break-word;
+        }
+
+        .past-work-item a:hover {
+            color: var(--primary-light);
+            border-bottom-color: var(--accent);
+        }
+
+        .past-work-item .pi-name {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
         /* Footer */
         .footer {
             background: var(--primary);
@@ -447,6 +508,91 @@
                 <p class="collaborator-description">
                     The <strong>Virginia Board for People with Disabilities</strong> brings essential advocacy, community connections, and domain expertise to this project. <a href="docs/VBPD-2018-Housing-Assessment.pdf" class="highlight" target='_blank'>Their deep understanding of affordable housing challenges facing people with disabilities</a> and proven track record of collaboration ensures our platform addresses real needs and reaches the communities that need it most.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Work Section -->
+    <section class="section past-work-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="decorative-line"></div>
+                <h2 class="section-title">Our Past Work</h2>
+            </div>
+
+            <div class="past-work-subsection">
+                <h3 class="past-work-subtitle">Urban Justice &amp; Local Information Access</h3>
+                <ol class="past-work-list">
+                    <li class="past-work-item">
+                        <a href="https://urbanrenewalimpact.net/" target="_blank" rel="noopener"><em>Urban Renewal Impact Map</em></a> &mdash; an interactive mapping project documenting the legacy of urban renewal in U.S. cities.
+                    </li>
+                    <li class="past-work-item">
+                        Virginia Board for People with Disabilities (2018). <a href="docs/VBPD-2018-Housing-Assessment.pdf" target="_blank" rel="noopener"><em>2018 Housing Assessment</em></a>.
+                    </li>
+                    <li class="past-work-item">
+                        <span class="pi-name">Lee, M.</span>, Abubakr, L., Shrivastava, T., Hsu, J. H. P., Whitman, S. A., &amp; Kim, P. (2024). <a href="https://vbpd.virginia.gov/wp-content/uploads/2024/08/2024-Assessement-of-Information-Ecology.pdf" target="_blank" rel="noopener"><em>2024 Assessment of Virginia's Information Ecology of the Disability Services System</em></a>. VBPD Annual Assessments.
+                    </li>
+                    <li class="past-work-item">
+                        <span class="pi-name">Lee, M.</span>, &amp; Butler, B. S. (2019). <a href="https://doi.org/10.1002/asi.24114" target="_blank" rel="noopener"><em>How are Information Deserts Created? A Theory of Local Information Landscapes</em></a>. <em>Journal of the Association for Information Science and Technology</em>, 70(2).
+                    </li>
+                    <li class="past-work-item">
+                        Wang, P., <span class="pi-name">Lee, M.</span>, Hangen, F., O'Brien, D. T., &amp; Tang, X. (2022). <a href="https://aisel.aisnet.org/ecis2022_rp/117/" target="_blank" rel="noopener"><em>Social Justice &amp; Technical Efficiency: The Role of Digital Technology in Boston's 311 System</em></a>. ECIS 2022.
+                    </li>
+                    <li class="past-work-item">
+                        Gordon, E., Harlow, J., Whitman, S., &amp; <span class="pi-name">Lee, M.</span> (2024). <a href="https://doi.org/10.1145/3652950" target="_blank" rel="noopener"><em>Data Discretion: Screen-Level Bureaucrats and Municipal Decision-Making</em></a>. <em>ACM Digital Government: Research and Practice</em>, 5(2).
+                    </li>
+                    <li class="past-work-item">
+                        <span class="pi-name">Lee, M.</span>, Peterson, M. E., Dam, T., Challa, B., &amp; Robinson, P. (2021). <a href="https://link.springer.com/chapter/10.1007/978-3-030-71305-8_26" target="_blank" rel="noopener"><em>Multi-Generational Stories of Urban Renewal: Preliminary Interviews for Map-based Storytelling</em></a>. iConference 2021.
+                    </li>
+                    <li class="past-work-item">
+                        <span class="pi-name">Lee, M.</span>, Chen, S., Zhang, Y., Spencer, E., &amp; Marciano, R. (2018). <a href="https://link.springer.com/chapter/10.1007/978-3-319-78105-1_72" target="_blank" rel="noopener"><em>Toward Identifying Values and Tensions in Designing a Historically-Sensitive Data Platform: A Case-Study on Urban Renewal</em></a>. iConference 2018.
+                    </li>
+                    <li class="past-work-item">
+                        Lee, G., &amp; <span class="pi-name">Lee, M.</span> (2025). <a href="https://doi.org/10.1002/pra2.1458" target="_blank" rel="noopener"><em>Quantifying Urban Change across U.S. Cities using the 1930s Redlining Maps: A Preliminary Study</em></a>. ASIST '25.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="past-work-subsection">
+                <h3 class="past-work-subtitle">Human-Centered System Design</h3>
+                <ol class="past-work-list">
+                    <li class="past-work-item">
+                        Ara, Z., Ganguly, A., Peppard, D., Chung, D., Vucetic, S., Motti, V. G., &amp; <span class="pi-name">Hong, S. R.</span> (2024). <a href="https://doi.org/10.1145/3613904.3642197" target="_blank" rel="noopener"><em>Collaborative Job Seeking for People with Autism: Challenges and Design Opportunities</em></a>. CHI '24.
+                    </li>
+                    <li class="past-work-item">
+                        Feng, H., Ara, Z., Hundt, A., Vucetic, S., Chung, J. J. Y., &amp; <span class="pi-name">Hong, S. R.</span> (2026). <a href="https://doi.org/10.1145/3772318.3791853" target="_blank" rel="noopener"><em>Lost in Translation: Understanding Autistic-Neurotypical Communication Style Differences in Job Postings</em></a>. CHI '26.
+                    </li>
+                    <li class="past-work-item">
+                        Ara, Z., Esmaeili, B., Yu, L.-F., &amp; <span class="pi-name">Hong, S. R.</span> (2026). <a href="https://doi.org/10.1145/3772363.3799052" target="_blank" rel="noopener"><em>Rethinking Productivity Support for Workers with ADHD in Construction</em></a>. CHI EA '26.
+                    </li>
+                    <li class="past-work-item">
+                        Abubakr, L., Shrivastava, T., Whitman, S., Pine, K., &amp; <span class="pi-name">Lee, M.</span> (2024). <a href="https://doi.org/10.1145/3678884.3681917" target="_blank" rel="noopener"><em>Understanding Information Managers: A Thematic Analysis of Information Challenges of Disability Service Providers</em></a>. CSCW '24 Companion.
+                    </li>
+                    <li class="past-work-item">
+                        Abubakr, L., Whitman, S., Shrivastava, T., Pine, K., Kim, P., &amp; <span class="pi-name">Lee, M.</span> (2025). <a href="https://doi.org/10.1002/pra2.1395" target="_blank" rel="noopener"><em>"We Just Get Frustrated": Exploring Factors that Shape Information Provision in Disability Services</em></a>. ASIST '25.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="past-work-subsection">
+                <h3 class="past-work-subtitle">AI-Based Urban Systems</h3>
+                <ol class="past-work-list">
+                    <li class="past-work-item">
+                        <span class="pi-name">Hashemi, M.</span>, &amp; Karimi, H. A. (2016). <a href="https://doi.org/10.1061/(asce)cp.1943-5487.0000534" target="_blank" rel="noopener"><em>Indoor Spatial Model and Accessibility Index for Emergency Evacuation of People with Disabilities</em></a>. <em>Journal of Computing in Civil Engineering</em>.
+                    </li>
+                    <li class="past-work-item">
+                        <span class="pi-name">Hashemi, M.</span>, &amp; Karimi, H. A. (2017). <a href="https://doi.org/10.1111/tgis.12230" target="_blank" rel="noopener"><em>Collaborative personalized multi-criteria wayfinding for wheelchair users in outdoors</em></a>. <em>Transactions in GIS</em>.
+                    </li>
+                    <li class="past-work-item">
+                        <span class="pi-name">Hashemi, M.</span> (2019). <a href="https://doi.org/10.1109/TITS.2019.2916588" target="_blank" rel="noopener"><em>Automatic Inference of Road and Pedestrian Networks From Spatial-Temporal Trajectories</em></a>. <em>IEEE Transactions on Intelligent Transportation Systems</em>.
+                    </li>
+                    <li class="past-work-item">
+                        <span class="pi-name">Hashemi, M.</span>, &amp; Karimi, H. A. (2020). <a href="https://doi.org/10.1109/JSTARS.2020.2995834" target="_blank" rel="noopener"><em>Weighted Machine Learning for Spatial-Temporal Data</em></a>. <em>IEEE JSTARS</em>.
+                    </li>
+                    <li class="past-work-item">
+                        <span class="pi-name">Hashemi, M.</span> (2022). <a href="https://doi.org/10.1080/08839514.2022.2073717" target="_blank" rel="noopener"><em>Automatic Type Detection of 311 Service Requests Based on Customer Provided Descriptions</em></a>. <em>Applied Artificial Intelligence</em>, 36(1).
+                    </li>
+                </ol>
             </div>
         </div>
     </section>
