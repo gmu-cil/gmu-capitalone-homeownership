@@ -31,7 +31,70 @@
             line-height: 1.7;
             overflow-x: hidden;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .top-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .top-nav-brand {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+        }
+
+        .top-nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            opacity: 0.88;
+            transition: opacity 0.2s ease, color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .top-nav-links a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        /* Offset anchored sections so they aren't hidden under the sticky nav */
+        section[id] {
+            scroll-margin-top: 80px;
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
@@ -396,6 +459,33 @@
             .collaborator-card {
                 padding: 40px 30px;
             }
+
+            .top-nav-inner {
+                padding: 0 16px;
+                gap: 12px;
+            }
+
+            .top-nav-brand {
+                font-size: 1rem;
+            }
+
+            .top-nav-links {
+                gap: 16px;
+            }
+
+            .top-nav-links a {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .top-nav-brand {
+                display: none;
+            }
+
+            .top-nav-inner {
+                justify-content: center;
+            }
         }
         
         /* Decorative Elements */
@@ -409,8 +499,21 @@
     </style>
 </head>
 <body>
+    <!-- Top Navigation -->
+    <nav class="top-nav" aria-label="Primary">
+        <div class="top-nav-inner">
+            <a href="#top" class="top-nav-brand">Pathways to Homeownership</a>
+            <ul class="top-nav-links">
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#collaborator">Collaborator</a></li>
+                <li><a href="#past-work">Past Work</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="top">
         <div class="hero-content">
             <h1>Mapping the Information Ecology of Homeownership Pathways: A Human-Centered Approach</h1>
             <p class="hero-subtitle">
@@ -420,7 +523,7 @@
     </section>
 
     <!-- Project Goal Section -->
-    <section class="section">
+    <section class="section" id="mission">
         <div class="container">
             <div class="section-header">
                 <div class="decorative-line"></div>
@@ -442,7 +545,7 @@
     </section>
 
     <!-- Team Section -->
-    <section class="section team-section">
+    <section class="section team-section" id="team">
         <div class="container">
             <div class="section-header">
                 <div class="decorative-line"></div>
@@ -493,7 +596,7 @@
     </section>
 
     <!-- Collaborator Section -->
-    <section class="section collaborator-section">
+    <section class="section collaborator-section" id="collaborator">
         <div class="container">
             <div class="section-header">
                 <div class="decorative-line"></div>
@@ -513,7 +616,7 @@
     </section>
 
     <!-- Past Work Section -->
-    <section class="section past-work-section">
+    <section class="section past-work-section" id="past-work">
         <div class="container">
             <div class="section-header">
                 <div class="decorative-line"></div>
