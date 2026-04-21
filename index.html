@@ -208,6 +208,27 @@
             color: var(--text-body);
             line-height: 1.6;
         }
+
+        .team-link {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .team-link:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .team-link::after {
+            content: " \2192";
+        }
         
         /* Collaborator Section */
         .collaborator-section {
@@ -380,6 +401,7 @@
                     <p class="team-expertise">
                         Information access and community-based research expert with extensive experience studying large-scale information ecology of disability services.
                     </p>
+                    <a href="https://cil.cec.gmu.edu/" class="team-link" target="_blank" rel="noopener">Community Informatics Lab</a>
                 </div>
                 
                 <div class="team-member">
@@ -391,6 +413,7 @@
                     <p class="team-expertise">
                         Human-in-the-loop and human-centered design expert with deep expertise in the developmental disability domain and accessible technology.
                     </p>
+                    <a href="https://alignment.lab.gmu.edu/" class="team-link" target="_blank" rel="noopener">Alignment Lab</a>
                 </div>
                 
                 <div class="team-member">
@@ -402,6 +425,7 @@
                     <p class="team-expertise">
                         AI and machine learning expert specializing in urban systems and intelligent infrastructure.
                     </p>
+                    <a href="https://cec.gmu.edu/profiles/mhashem2" class="team-link" target="_blank" rel="noopener">Faculty Profile</a>
                 </div>
             </div>
         </div>
